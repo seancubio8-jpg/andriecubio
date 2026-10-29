@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#08111f">
     <meta name="description"
-        content="Personal portfolio of Sean Andrie Cubio, showcasing IT skills, projects, certificates, mock interview, reflection, and career goals.">
-
+        content="Personal portfolio of Sean Andrie Cubio, showcasing IT skills, projects, problem solving, certificates, mock interview, reflection, and career goals.">
     <title>Sean Andrie Cubio | Portfolio</title>
 
     <style>
@@ -94,8 +93,7 @@
             color: var(--accent);
         }
 
-        /* NAVIGATION */
-
+        /* Navigation */
         .site-header {
             position: sticky;
             top: 0;
@@ -126,13 +124,13 @@
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 17px;
+            gap: 15px;
             list-style: none;
         }
 
         .nav-links a {
             color: var(--muted);
-            font-size: 13px;
+            font-size: 12px;
             transition: color .2s;
         }
 
@@ -150,8 +148,7 @@
             padding: 8px 12px;
         }
 
-        /* BUTTONS */
-
+        /* Buttons */
         .btn {
             display: inline-flex;
             justify-content: center;
@@ -182,16 +179,13 @@
             background: #67e8d5;
         }
 
-        /* HERO */
-
+        /* Hero */
         .hero {
             min-height: 650px;
             display: flex;
             align-items: center;
             padding: 80px 0;
-            background:
-                radial-gradient(ellipse at 85% 20%, rgba(53, 208, 186, .12), transparent 35%),
-                radial-gradient(ellipse at 5% 85%, rgba(45, 100, 200, .1), transparent 35%);
+            background: radial-gradient(ellipse at 85% 20%, rgba(53, 208, 186, .12), transparent 35%), radial-gradient(ellipse at 5% 85%, rgba(45, 100, 200, .1), transparent 35%);
         }
 
         .hero-grid {
@@ -249,7 +243,7 @@
         .hero-image {
             position: relative;
             width: 100%;
-            aspect-ratio: 4 / 5;
+            aspect-ratio: 4/5;
             object-fit: cover;
             border-radius: 22px;
             border: 1px solid var(--border);
@@ -259,7 +253,7 @@
 
         .image-fallback {
             width: 100%;
-            aspect-ratio: 4 / 5;
+            aspect-ratio: 4/5;
             display: none;
             align-items: center;
             justify-content: center;
@@ -286,8 +280,7 @@
             display: flex;
         }
 
-        /* ABOUT */
-
+        /* About */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -324,8 +317,7 @@
             color: var(--text);
         }
 
-        /* SKILLS */
-
+        /* Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -360,8 +352,127 @@
             margin-top: 8px;
         }
 
-        /* PROJECTS */
+        /* Problem solving */
+        .problem-solving-intro {
+            max-width: 760px;
+            margin: 0 auto 32px;
+            text-align: center;
+        }
 
+        .problem-solving-intro .eyebrow {
+            margin-bottom: 12px;
+        }
+
+        .problem-solving-intro h3 {
+            font-size: clamp(25px, 4vw, 36px);
+            margin-bottom: 12px;
+        }
+
+        .problem-solving-intro p {
+            color: var(--muted);
+        }
+
+        .problem-solving-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .problem-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: border-color .2s, transform .2s;
+        }
+
+        .problem-card:hover,
+        .problem-card[open] {
+            border-color: rgba(53, 208, 186, .5);
+        }
+
+        .problem-card summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 22px;
+        }
+
+        .problem-card summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .problem-number {
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            width: 43px;
+            height: 43px;
+            border-radius: 10px;
+            background: rgba(53, 208, 186, .1);
+            border: 1px solid rgba(53, 208, 186, .2);
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .problem-title {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .problem-title h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .problem-title p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .problem-toggle {
+            flex-shrink: 0;
+            color: var(--accent);
+            font-size: 25px;
+            transition: transform .2s;
+        }
+
+        .problem-card[open] .problem-toggle {
+            transform: rotate(45deg);
+        }
+
+        .problem-details {
+            padding: 0 22px 22px;
+            border-top: 1px solid var(--border);
+        }
+
+        .problem-details h4 {
+            color: var(--accent);
+            font-size: 13px;
+            margin: 17px 0 6px;
+        }
+
+        .problem-details p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .problem-lesson {
+            margin-top: 15px;
+            padding: 13px;
+            background: rgba(53, 208, 186, .06);
+            border-left: 3px solid var(--accent);
+            border-radius: 5px;
+        }
+
+        .problem-lesson strong {
+            color: var(--text);
+        }
+
+        /* Projects and certificates */
         .projects-grid,
         .certificates-grid {
             display: grid;
@@ -428,11 +539,9 @@
             font-size: 12px;
         }
 
-        /* CERTIFICATES */
-
         .certificate-image {
             width: 100%;
-            aspect-ratio: 4 / 3;
+            aspect-ratio: 4/3;
             object-fit: contain;
             background: #e8edf3;
             padding: 8px;
@@ -448,8 +557,7 @@
             margin-top: 5px;
         }
 
-        /* MOCK INTERVIEW VIDEO */
-
+        /* Interview */
         .interview-card {
             max-width: 900px;
             margin: 0 auto;
@@ -461,7 +569,6 @@
         }
 
         .interview-video-wrap {
-            position: relative;
             width: 100%;
             background: #000;
         }
@@ -470,7 +577,7 @@
             display: block;
             width: 100%;
             max-height: 600px;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16/9;
             object-fit: contain;
             background: #000;
         }
@@ -495,8 +602,7 @@
             margin-bottom: 0 !important;
         }
 
-        /* REFLECTION */
-
+        /* Reflection and career */
         .reflection-box {
             max-width: 900px;
             margin: auto;
@@ -515,8 +621,6 @@
         .reflection-box p:last-child {
             margin-bottom: 0;
         }
-
-        /* CAREER PLAN */
 
         .career-grid {
             display: grid;
@@ -545,8 +649,7 @@
             font-size: 14px;
         }
 
-        /* CONTACT */
-
+        /* Contact */
         .contact-grid {
             display: grid;
             grid-template-columns: .8fr 1.2fr;
@@ -596,8 +699,7 @@
             font-size: 12px;
         }
 
-        /* FOOTER */
-
+        /* Footer */
         footer {
             border-top: 1px solid var(--border);
             padding: 25px 0;
@@ -606,8 +708,7 @@
             font-size: 13px;
         }
 
-        /* MODALS */
-
+        /* Modals */
         .modal {
             position: fixed;
             inset: 0;
@@ -790,8 +891,6 @@
             font-size: 12px;
         }
 
-        /* RESUME PREVIEW */
-
         .resume-preview-wrap {
             position: relative;
             height: min(70vh, 750px);
@@ -839,19 +938,18 @@
             max-width: 420px;
         }
 
-        /* RESPONSIVE */
-
-        @media (max-width: 1000px) {
+        /* Responsive */
+        @media(max-width:1050px) {
             .nav-links {
-                gap: 10px;
+                gap: 9px;
             }
 
             .nav-links a {
-                font-size: 12px;
+                font-size: 11px;
             }
         }
 
-        @media (max-width: 900px) {
+        @media(max-width:900px) {
             .hero-grid {
                 gap: 35px;
             }
@@ -893,7 +991,7 @@
             }
         }
 
-        @media (max-width: 680px) {
+        @media(max-width:680px) {
             .section {
                 padding: 65px 0;
             }
@@ -941,7 +1039,8 @@
 
             .projects-grid,
             .certificates-grid,
-            .career-grid {
+            .career-grid,
+            .problem-solving-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -954,8 +1053,17 @@
             }
 
             .interview-video {
-                aspect-ratio: 16 / 9;
+                aspect-ratio: 16/9;
                 max-height: 400px;
+            }
+
+            .problem-card summary {
+                padding: 17px;
+                gap: 11px;
+            }
+
+            .problem-details {
+                padding: 0 17px 18px;
             }
 
             .modal {
@@ -995,7 +1103,7 @@
             }
         }
 
-        @media (max-width: 380px) {
+        @media(max-width:380px) {
             .hero-buttons {
                 flex-direction: column;
                 align-items: stretch;
@@ -1010,7 +1118,7 @@
             }
         }
 
-        @media (prefers-reduced-motion: reduce) {
+        @media(prefers-reduced-motion:reduce) {
 
             *,
             *::before,
@@ -1025,20 +1133,17 @@
 
 <body>
 
-    <!-- HEADER -->
     <header class="site-header">
         <div class="container navbar">
             <a class="logo" href="#home">Sean<span>.</span></a>
-
-            <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks">
-                ☰ Menu
-            </button>
-
+            <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks">☰
+                Menu</button>
             <nav aria-label="Main navigation">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#problem-solving">Problem Solving</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#certificates">Certificates</a></li>
                     <li><a href="#interview">Mock Interview</a></li>
@@ -1057,33 +1162,22 @@
             <div class="container hero-grid">
                 <div class="hero-content">
                     <p class="eyebrow">Information Technology Student</p>
-
                     <h1>Hello, I'm <span class="accent">Sean Andrie Cubio</span></h1>
-
                     <p class="hero-description">
-                        I am an Information Technology student interested in
-                        web development, database management, and creating
-                        useful digital solutions. This portfolio presents my
-                        skills, academic projects, certificates, and career goals.
+                        I am an Information Technology student interested in web development,
+                        database management, and creating useful digital solutions. This
+                        portfolio presents my skills, academic projects, certificates,
+                        problem-solving approach, and career goals.
                     </p>
-
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            View My Projects ↗
-                        </a>
-
-                        <button type="button" class="btn" id="quickViewResume">
-                            Quick View Resume 📄
-                        </button>
-
+                        <a href="#projects" class="btn btn-primary">View My Projects ↗</a>
+                        <button type="button" class="btn" id="quickViewResume">Quick View Resume 📄</button>
                         <a href="#contact" class="btn">Contact Me</a>
                     </div>
                 </div>
-
                 <div class="hero-image-wrap" id="profileImageWrap">
                     <img src="assets/images/profile.png" alt="Portrait of Sean Andrie Cubio" class="hero-image"
                         id="profileImage">
-
                     <div class="image-fallback">
                         <strong>SC</strong>
                         <span>Sean Andrie Cubio</span>
@@ -1100,25 +1194,22 @@
                     <h2>About <span class="accent">Me</span></h2>
                     <p>Get to know me and my interests in Information Technology.</p>
                 </div>
-
                 <div class="about-grid">
                     <article class="card">
                         <h3>Who I Am</h3>
                         <p>
-                            I am an IT student who is learning how to design,
-                            develop, and improve computer-based systems. I use
-                            school activities and projects to practice my skills
-                            and understand how technology can solve everyday problems.
+                            I am an IT student who is learning how to design, develop,
+                            and improve computer-based systems. I use school activities
+                            and projects to practice my skills and understand how
+                            technology can solve everyday problems.
                         </p>
                         <br>
                         <p>
-                            I believe that learning takes time, practice, patience,
-                            and the willingness to improve. I want to continue
-                            developing my technical knowledge through real projects
-                            and hands-on experience.
+                            I believe that learning takes time, practice, patience, and
+                            the willingness to improve. I want to continue developing
+                            my technical knowledge through real projects and hands-on experience.
                         </p>
                     </article>
-
                     <article class="card">
                         <h3>Personal Information</h3>
                         <ul class="info-list">
@@ -1140,55 +1231,196 @@
                     <h2>My <span class="accent">Skills</span></h2>
                     <p>Technologies and abilities I am learning and practicing.</p>
                 </div>
-
                 <div class="skills-grid">
                     <article class="skill-card">
                         <div class="skill-icon">⌨</div>
                         <h3>HTML & CSS</h3>
                         <p>Creating website structures, layouts, and responsive designs.</p>
                     </article>
-
                     <article class="skill-card">
                         <div class="skill-icon">JS</div>
                         <h3>JavaScript</h3>
                         <p>Adding interaction and basic functionality to websites.</p>
                     </article>
-
                     <article class="skill-card">
                         <div class="skill-icon">PHP</div>
                         <h3>PHP</h3>
                         <p>Learning server-side programming and dynamic websites.</p>
                     </article>
-
                     <article class="skill-card">
                         <div class="skill-icon">▤</div>
                         <h3>Database</h3>
                         <p>Understanding data organization, storage, and retrieval.</p>
                     </article>
-
                     <article class="skill-card">
                         <div class="skill-icon">◇</div>
                         <h3>UI Design</h3>
                         <p>Building clean, understandable, and user-friendly interfaces.</p>
                     </article>
-
                     <article class="skill-card">
                         <div class="skill-icon">⌘</div>
                         <h3>Problem Solving</h3>
                         <p>Identifying issues, testing solutions, and improving code.</p>
                     </article>
-
                     <article class="skill-card">
                         <div class="skill-icon">⚙</div>
                         <h3>System Development</h3>
                         <p>Planning and developing systems for academic projects.</p>
                     </article>
-
                     <article class="skill-card">
                         <div class="skill-icon">↗</div>
                         <h3>Continuous Learning</h3>
                         <p>Practicing new tools and improving my IT knowledge.</p>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROBLEM SOLVING -->
+        <section class="section" id="problem-solving">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Problem <span class="accent">Solving</span></h2>
+                    <p>How I analyze problems, test solutions, and learn from errors.</p>
+                </div>
+
+                <div class="problem-solving-intro">
+                    <p class="eyebrow">04 / HOW I APPROACH PROBLEMS</p>
+                    <h3>Think clearly.<br><span class="accent">Test step by step.</span></h3>
+                    <p>
+                        Sample troubleshooting topics based on common development tasks.
+                        Replace these drafts with the actual problems, diagnostics, fixes,
+                        and lessons from your own experience.
+                    </p>
+                </div>
+
+                <div class="problem-solving-grid">
+
+                    <details class="problem-card">
+                        <summary>
+                            <span class="problem-number">01</span>
+                            <div class="problem-title">
+                                <h3>Website cannot connect to database</h3>
+                                <p>Database connection and configuration</p>
+                            </div>
+                            <span class="problem-toggle" aria-hidden="true">＋</span>
+                        </summary>
+                        <div class="problem-details">
+                            <h4>Possible causes</h4>
+                            <p>MySQL service is stopped or connection details are incorrect.</p>
+                            <h4>Diagnostic approach</h4>
+                            <p>
+                                Check service status, database name, credentials, host,
+                                and error logs. Test the connection before changing other code.
+                            </p>
+                            <div class="problem-lesson">
+                                <p><strong>Lesson:</strong> Verify configuration and test the connection before changing
+                                    unrelated code.</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="problem-card">
+                        <summary>
+                            <span class="problem-number">02</span>
+                            <div class="problem-title">
+                                <h3>PHP page reports an undefined function</h3>
+                                <p>PHP errors and missing functions</p>
+                            </div>
+                            <span class="problem-toggle" aria-hidden="true">＋</span>
+                        </summary>
+                        <div class="problem-details">
+                            <h4>Possible causes</h4>
+                            <p>Missing function definition, incorrect spelling, or an include file that was not loaded.
+                            </p>
+                            <h4>Diagnostic approach</h4>
+                            <p>
+                                Search for the function and inspect include/require paths
+                                and load order. Check whether the file containing the
+                                function is included before it is called.
+                            </p>
+                            <div class="problem-lesson">
+                                <p><strong>Lesson:</strong> Read the error carefully and isolate the smallest failing
+                                    part.</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="problem-card">
+                        <summary>
+                            <span class="problem-number">03</span>
+                            <div class="problem-title">
+                                <h3>Website works locally but not on hosting</h3>
+                                <p>Deployment and hosting configuration</p>
+                            </div>
+                            <span class="problem-toggle" aria-hidden="true">＋</span>
+                        </summary>
+                        <div class="problem-details">
+                            <h4>Possible causes</h4>
+                            <p>File paths, case-sensitive filenames, missing files, or hosting database settings.</p>
+                            <h4>Diagnostic approach</h4>
+                            <p>
+                                Compare local and hosted configuration and inspect available
+                                error logs. Verify file paths, file permissions, database
+                                settings, and the files uploaded to the server.
+                            </p>
+                            <div class="problem-lesson">
+                                <p><strong>Lesson:</strong> Test the deployed version and document configuration
+                                    differences.</p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="problem-card">
+                        <summary>
+                            <span class="problem-number">04</span>
+                            <div class="problem-title">
+                                <h3>User cannot log in</h3>
+                                <p>Authentication and validation</p>
+                            </div>
+                            <span class="problem-toggle" aria-hidden="true">＋</span>
+                        </summary>
+                        <div class="problem-details">
+                            <h4>Possible causes</h4>
+                            <p>Validation errors, incorrect credentials, or an authentication/database issue.</p>
+                            <h4>Diagnostic approach</h4>
+                            <p>
+                                Test valid and invalid inputs and review server-side
+                                validation without exposing passwords. Check authentication
+                                errors and confirm the database lookup works correctly.
+                            </p>
+                            <div class="problem-lesson">
+                                <p><strong>Lesson:</strong> Authentication must be tested securely, not just visually.
+                                </p>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="problem-card">
+                        <summary>
+                            <span class="problem-number">05</span>
+                            <div class="problem-title">
+                                <h3>Excel results do not look correct</h3>
+                                <p>Spreadsheet formulas and data checking</p>
+                            </div>
+                            <span class="problem-toggle" aria-hidden="true">＋</span>
+                        </summary>
+                        <div class="problem-details">
+                            <h4>Possible causes</h4>
+                            <p>Incorrect formula ranges, duplicate rows, or numbers stored as text.</p>
+                            <h4>Diagnostic approach</h4>
+                            <p>
+                                Inspect the data, verify formula ranges, and compare
+                                sample results manually. Check for missing values,
+                                duplicates, and inconsistent number formats.
+                            </p>
+                            <div class="problem-lesson">
+                                <p><strong>Lesson:</strong> Clean data and independently verify important calculations.
+                                </p>
+                            </div>
+                        </div>
+                    </details>
+
                 </div>
             </div>
         </section>
@@ -1200,38 +1432,23 @@
                     <h2>My <span class="accent">Projects</span></h2>
                     <p>Selected academic and web development projects.</p>
                 </div>
-
                 <div class="projects-grid">
 
                     <article class="project-card">
                         <img src="assets/images/tapseafo.jpg" alt="Food ordering system project" class="project-image">
-
                         <div class="project-content">
                             <h3>Food Ordering System</h3>
-                            <p>
-                                A web-based food ordering project designed to help
-                                customers browse meals and manage orders. The planned
-                                system also includes meal recommendations and inventory
-                                management.
+                            <p>A web-based food ordering project designed to help customers browse meals and manage
+                                orders. The planned system also includes meal recommendations and inventory management.
                             </p>
-
-                            <div class="tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                                <span class="tag">Database</span>
-                            </div>
-
+                            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                    class="tag">JavaScript</span><span class="tag">Database</span></div>
                             <div class="project-actions">
                                 <button class="btn btn-primary live-demo" type="button"
-                                    data-title="Food Ordering System" data-src="food-ordering-demo.html">
-                                    Live Demo ↗
-                                </button>
-
+                                    data-title="Food Ordering System" data-src="food-ordering-demo.html">Live Demo
+                                    ↗</button>
                                 <button class="btn project-details" type="button" data-title="Food Ordering System"
-                                    data-description="A web-based food ordering project designed to help customers browse meals and manage orders. Proposed features include meal recommendations, order tracking, and inventory management.">
-                                    Details
-                                </button>
+                                    data-description="A web-based food ordering project designed to help customers browse meals and manage orders. Proposed features include meal recommendations, order tracking, and inventory management.">Details</button>
                             </div>
                         </div>
                     </article>
@@ -1239,31 +1456,18 @@
                     <article class="project-card">
                         <img src="assets/images/hotel_booking.jpg" alt="GrandStay hotel reservation system"
                             class="project-image">
-
                         <div class="project-content">
                             <h3>GrandStay Hotel Booking</h3>
-                            <p>
-                                A hotel reservation system concept that allows users
-                                to explore rooms, submit booking details, and view
-                                reservation information.
-                            </p>
-
-                            <div class="tags">
-                                <span class="tag">HTML</span>
-                                <span class="tag">CSS</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-
+                            <p>A hotel reservation system concept that allows users to explore rooms, submit booking
+                                details, and view reservation information.</p>
+                            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                    class="tag">JavaScript</span></div>
                             <div class="project-actions">
                                 <button class="btn btn-primary live-demo" type="button"
-                                    data-title="GrandStay Hotel Booking" data-src="grandstay-hotel-demo.html">
-                                    Live Demo ↗
-                                </button>
-
+                                    data-title="GrandStay Hotel Booking" data-src="grandstay-hotel-demo.html">Live Demo
+                                    ↗</button>
                                 <button class="btn project-details" type="button" data-title="GrandStay Hotel Booking"
-                                    data-description="GrandStay is a hotel reservation project concept focused on presenting room information and collecting booking details through a simple interface.">
-                                    Details
-                                </button>
+                                    data-description="GrandStay is a hotel reservation project concept focused on presenting room information and collecting booking details through a simple interface.">Details</button>
                             </div>
                         </div>
                     </article>
@@ -1271,31 +1475,18 @@
                     <article class="project-card">
                         <img src="assets/images/arduino_dispenser.jpg" alt="Arduino water dispenser project"
                             class="project-image">
-
                         <div class="project-content">
                             <h3>Arduino Water Dispenser</h3>
-                            <p>
-                                An academic project concept involving a water
-                                dispenser vending machine using electronic
-                                components and control logic.
-                            </p>
-
-                            <div class="tags">
-                                <span class="tag">Arduino</span>
-                                <span class="tag">Hardware</span>
-                                <span class="tag">Electronics</span>
-                            </div>
-
+                            <p>An academic project concept involving a water dispenser vending machine using electronic
+                                components and control logic.</p>
+                            <div class="tags"><span class="tag">Arduino</span><span class="tag">Hardware</span><span
+                                    class="tag">Electronics</span></div>
                             <div class="project-actions">
                                 <button class="btn btn-primary live-demo" type="button"
-                                    data-title="Arduino Water Dispenser" data-src="arduino-water-dispenser-demo.html">
-                                    Live Demo ↗
-                                </button>
-
+                                    data-title="Arduino Water Dispenser"
+                                    data-src="arduino-water-dispenser-demo.html">Live Demo ↗</button>
                                 <button class="btn project-details" type="button" data-title="Arduino Water Dispenser"
-                                    data-description="This project explores the design of a water dispenser vending machine, including electronic components, control logic, and user interaction.">
-                                    Details
-                                </button>
+                                    data-description="This project explores the design of a water dispenser vending machine, including electronic components, control logic, and user interaction.">Details</button>
                             </div>
                         </div>
                     </article>
@@ -1311,7 +1502,6 @@
                     <h2>My <span class="accent">Certificates</span></h2>
                     <p>Certificates and learning achievements.</p>
                 </div>
-
                 <div class="certificates-grid">
                     <article class="certificate-card">
                         <img src="assets/images/andrie1.jpg" alt="Certificate 1" class="certificate-image">
@@ -1320,7 +1510,6 @@
                             <p>Training or learning achievement.</p>
                         </div>
                     </article>
-
                     <article class="certificate-card">
                         <img src="assets/images/andrie2.jpg" alt="Certificate 2" class="certificate-image">
                         <div class="certificate-info">
@@ -1328,7 +1517,6 @@
                             <p>Training or learning achievement.</p>
                         </div>
                     </article>
-
                     <article class="certificate-card">
                         <img src="assets/images/andrie3.jpg" alt="Certificate 3" class="certificate-image">
                         <div class="certificate-info">
@@ -1340,51 +1528,34 @@
             </div>
         </section>
 
-        <!-- MOCK INTERVIEW VIDEO -->
+        <!-- MOCK INTERVIEW -->
         <section class="section" id="interview">
             <div class="container">
                 <div class="section-heading">
                     <h2>Mock <span class="accent">Interview</span></h2>
-                    <p>
-                        My mock interview presentation and career preparation
-                        as an Information Technology student.
-                    </p>
+                    <p>My mock interview presentation and career preparation as an Information Technology student.</p>
                 </div>
-
                 <article class="interview-card">
                     <div class="interview-video-wrap">
                         <video class="interview-video" id="mockInterviewVideo" controls preload="metadata" playsinline
                             aria-label="Mock interview video of Sean Andrie Cubio">
-
                             <source src="assets/videos/andrie.mp4" type="video/mp4">
-
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
-
                     <div class="interview-content">
                         <h3>My Mock Interview Presentation</h3>
-
-                        <p>
-                            This video presents my mock interview as an
-                            Information Technology student. It demonstrates
-                            how I introduce myself, communicate my skills,
-                            discuss my experiences, and explain my career goals.
-                        </p>
-
+                        <p>This video presents my mock interview as an Information Technology student. It demonstrates
+                            how I introduce myself, communicate my skills, discuss my experiences, and explain my career
+                            goals.</p>
                         <div class="interview-tags">
-                            <span class="tag">Communication Skills</span>
-                            <span class="tag">Interview Preparation</span>
-                            <span class="tag">Career Development</span>
-                            <span class="tag">Information Technology</span>
+                            <span class="tag">Communication Skills</span><span class="tag">Interview
+                                Preparation</span><span class="tag">Career Development</span><span
+                                class="tag">Information Technology</span>
                         </div>
-
-                        <a href="videos/andrie.mp4" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                            Open Video in New Tab ↗
-                        </a>
-
-                        <p class="interview-status" id="interviewStatus" role="status" aria-live="polite">
-                            Ready to play
+                        <a href="assets/videos/andrie.mp4" class="btn btn-primary" target="_blank"
+                            rel="noopener noreferrer">Open Video in New Tab ↗</a>
+                        <p class="interview-status" id="interviewStatus" role="status" aria-live="polite">Ready to play
                         </p>
                     </div>
                 </article>
@@ -1398,36 +1569,20 @@
                     <h2>My <span class="accent">Reflection</span></h2>
                     <p>What I have learned during my IT journey.</p>
                 </div>
-
                 <div class="reflection-box">
-                    <p>
-                        As an Information Technology student, I have learned that
-                        developing a website or system requires more than writing
-                        code. It also involves planning, problem-solving, testing,
-                        and understanding the needs of users.
-                    </p>
-
-                    <p>
-                        Through my academic projects, I have experienced that
-                        mistakes are part of learning. When something does not work,
-                        I need to check the code, identify the possible cause, and
-                        try different solutions. These experiences help me become
-                        more patient and careful when working on technical tasks.
-                    </p>
-
-                    <p>
-                        I also learned the importance of organizing information
-                        and designing interfaces that users can understand.
-                        A system should not only work properly; it should also
-                        be easy to use and useful for its intended purpose.
-                    </p>
-
-                    <p>
-                        In the future, I want to improve my programming skills,
-                        learn more development tools, and gain experience by
-                        working on projects. I understand that technology keeps
-                        changing, so I need to continue learning and practicing.
-                    </p>
+                    <p>As an Information Technology student, I have learned that developing a website or system requires
+                        more than writing code. It also involves planning, problem-solving, testing, and understanding
+                        the needs of users.</p>
+                    <p>Through my academic projects, I have experienced that mistakes are part of learning. When
+                        something does not work, I need to check the code, identify the possible cause, and try
+                        different solutions. These experiences help me become more patient and careful when working on
+                        technical tasks.</p>
+                    <p>I also learned the importance of organizing information and designing interfaces that users can
+                        understand. A system should not only work properly; it should also be easy to use and useful for
+                        its intended purpose.</p>
+                    <p>In the future, I want to improve my programming skills, learn more development tools, and gain
+                        experience by working on projects. I understand that technology keeps changing, so I need to
+                        continue learning and practicing.</p>
                 </div>
             </div>
         </section>
@@ -1439,36 +1594,24 @@
                     <h2>My Career <span class="accent">Plan</span></h2>
                     <p>My goals for professional growth in Information Technology.</p>
                 </div>
-
                 <div class="career-grid">
                     <article class="career-card">
                         <div class="career-number">01</div>
                         <h3>Short-Term Goal</h3>
-                        <p>
-                            Finish my studies, strengthen my programming
-                            fundamentals, and complete academic projects that
-                            demonstrate my skills.
-                        </p>
+                        <p>Finish my studies, strengthen my programming fundamentals, and complete academic projects
+                            that demonstrate my skills.</p>
                     </article>
-
                     <article class="career-card">
                         <div class="career-number">02</div>
                         <h3>Mid-Term Goal</h3>
-                        <p>
-                            Gain practical experience through internships,
-                            personal projects, teamwork, and entry-level
-                            opportunities in IT.
-                        </p>
+                        <p>Gain practical experience through internships, personal projects, teamwork, and entry-level
+                            opportunities in IT.</p>
                     </article>
-
                     <article class="career-card">
                         <div class="career-number">03</div>
                         <h3>Long-Term Goal</h3>
-                        <p>
-                            Become a capable IT professional who can develop
-                            reliable systems, solve problems, and continue
-                            learning new technologies.
-                        </p>
+                        <p>Become a capable IT professional who can develop reliable systems, solve problems, and
+                            continue learning new technologies.</p>
                     </article>
                 </div>
             </div>
@@ -1481,55 +1624,29 @@
                     <h2>Contact <span class="accent">Me</span></h2>
                     <p>Send a message or get in touch.</p>
                 </div>
-
                 <div class="contact-grid">
                     <div class="card contact-details">
                         <h3>Let's Connect</h3>
-
-                        <p>
-                            I am open to learning opportunities, collaboration,
-                            and discussions about IT projects.
-                        </p>
-
+                        <p>I am open to learning opportunities, collaboration, and discussions about IT projects.</p>
                         <p><strong class="accent">Name:</strong> Sean Andrie Cubio</p>
                         <p><strong class="accent">Field:</strong> Information Technology</p>
-                        <p>
-                            <strong class="accent">Email:</strong>
-                            Add your email address here
-                        </p>
+                        <p><strong class="accent">Email:</strong> Add your email address here</p>
                     </div>
-
                     <form class="card contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="contactName">Your Name</label>
-                            <input type="text" id="contactName" name="name" placeholder="Enter your name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contactEmail">Your Email</label>
-                            <input type="email" id="contactEmail" name="email" placeholder="Enter your email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contactMessage">Message</label>
-                            <textarea id="contactMessage" name="message" placeholder="Write your message..."
-                                required></textarea>
-                        </div>
-
-                        <button class="btn btn-primary" type="submit">
-                            Send Message ↗
-                        </button>
-
-                        <p class="form-note">
-                            This form opens your default email application.
-                        </p>
+                        <div class="form-group"><label for="contactName">Your Name</label><input type="text"
+                                id="contactName" name="name" placeholder="Enter your name" required></div>
+                        <div class="form-group"><label for="contactEmail">Your Email</label><input type="email"
+                                id="contactEmail" name="email" placeholder="Enter your email" required></div>
+                        <div class="form-group"><label for="contactMessage">Message</label><textarea id="contactMessage"
+                                name="message" placeholder="Write your message..." required></textarea></div>
+                        <button class="btn btn-primary" type="submit">Send Message ↗</button>
+                        <p class="form-note">This form opens your default email application.</p>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p>© <span id="currentYear"></span> Sean Andrie Cubio. Personal Portfolio.</p>
@@ -1539,45 +1656,32 @@
     <!-- LIVE DEMO MODAL -->
     <div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle"
         aria-hidden="true">
-
         <div class="modal-box">
             <div class="modal-header">
                 <div class="modal-title-wrap">
                     <h2 id="demoModalTitle">Project Live Demo</h2>
                     <p id="demoModalSubtitle">Project preview</p>
                 </div>
-
                 <button type="button" class="modal-close" id="closeDemoModal" aria-label="Close demo">×</button>
             </div>
-
             <div class="browser-bar">
-                <div class="browser-dots" aria-hidden="true">
-                    <span></span><span></span><span></span>
-                </div>
+                <div class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
                 <div class="browser-address" id="demoAddress">Project preview</div>
             </div>
-
             <div class="preview-wrap">
                 <iframe id="demoFrame" title="Project live demo" loading="lazy"></iframe>
-
                 <div class="preview-message" id="demoError">
                     <div class="preview-message-inner">
                         <h3>Demo could not be displayed</h3>
-                        <p>
-                            Check that the demo HTML file exists in the same
-                            folder as this portfolio and that its filename is correct.
+                        <p>Check that the demo HTML file exists in the correct folder and that its filename is correct.
                         </p>
                     </div>
                 </div>
             </div>
-
             <div class="modal-footer">
                 <small>Interactive project preview</small>
-                <div class="modal-actions">
-                    <a href="#" class="btn btn-primary" id="openDemoTab" target="_blank" rel="noopener noreferrer">
-                        Open in New Tab ↗
-                    </a>
-                </div>
+                <div class="modal-actions"><a href="#" class="btn btn-primary" id="openDemoTab" target="_blank"
+                        rel="noopener noreferrer">Open in New Tab ↗</a></div>
             </div>
         </div>
     </div>
@@ -1585,120 +1689,91 @@
     <!-- PROJECT DETAILS MODAL -->
     <div class="modal" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="detailsModalTitle"
         aria-hidden="true">
-
         <div class="modal-box">
             <div class="modal-header">
                 <div class="modal-title-wrap">
                     <h2 id="detailsModalTitle">Project Details</h2>
                     <p>Project overview</p>
                 </div>
-
                 <button type="button" class="modal-close" id="closeDetailsModal" aria-label="Close details">×</button>
             </div>
-
-            <div class="preview-wrap" style="padding:28px; min-height:220px;">
+            <div class="preview-wrap" style="padding:28px;min-height:220px;">
                 <div>
                     <h3 id="detailsHeading" style="margin-bottom:12px;"></h3>
-                    <p id="detailsDescription" style="color:var(--muted); line-height:1.9;"></p>
+                    <p id="detailsDescription" style="color:var(--muted);line-height:1.9;"></p>
                 </div>
             </div>
-
-            <div class="modal-footer">
-                <small>Project information</small>
-                <button type="button" class="btn" id="closeDetailsFooter">Close</button>
-            </div>
+            <div class="modal-footer"><small>Project information</small><button type="button" class="btn"
+                    id="closeDetailsFooter">Close</button></div>
         </div>
     </div>
 
-    <!-- QUICK VIEW RESUME MODAL -->
+    <!-- RESUME MODAL -->
     <div class="modal" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle"
         aria-hidden="true">
-
         <div class="modal-box">
             <div class="modal-header">
                 <div class="modal-title-wrap">
                     <h2 id="resumeModalTitle">My Resume</h2>
                     <p>Sean Andrie Cubio — Resume Preview</p>
                 </div>
-
                 <button type="button" class="modal-close" id="closeResumeModal" aria-label="Close resume">×</button>
             </div>
-
             <div class="browser-bar">
-                <div class="browser-dots" aria-hidden="true">
-                    <span></span><span></span><span></span>
-                </div>
+                <div class="browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
                 <div class="browser-address">assets/images/resume.png</div>
             </div>
-
             <div class="resume-preview-wrap">
                 <img id="resumePreview" src="assets/images/resume.png" alt="Resume of Sean Andrie Cubio">
-
                 <div id="resumeError">
                     <div>
                         <h3>Resume not found</h3>
-                        <p>
-                            Please save your resume image at
-                            <strong>assets/images/resume.png</strong>.
-                        </p>
+                        <p>Please save your resume image at <strong>assets/images/resume.png</strong>.</p>
                     </div>
                 </div>
             </div>
-
             <div class="modal-footer">
                 <small>Resume image preview</small>
-
                 <div class="modal-actions">
-                    <a href="assets/images/resume.png" class="btn" id="openResumeTab" target="_blank"
-                        rel="noopener noreferrer">
-                        Open in New Tab ↗
-                    </a>
-
-                    <a href="assets/images/resume.png" class="btn btn-primary" id="downloadResume"
-                        download="Sean-Andrie-Cubio-Resume.png">
-                        Download Resume ↓
-                    </a>
+                    <a href="assets/images/resume.png" class="btn" target="_blank" rel="noopener noreferrer">Open in New
+                        Tab ↗</a>
+                    <a href="assets/images/resume.png" class="btn btn-primary"
+                        download="Sean-Andrie-Cubio-Resume.png">Download Resume ↓</a>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // MOBILE NAVIGATION
+        // Mobile navigation
         const menuToggle = document.getElementById("menuToggle");
         const navLinks = document.getElementById("navLinks");
 
         menuToggle.addEventListener("click", function () {
-            const isOpen = navLinks.classList.toggle("open");
-            menuToggle.setAttribute("aria-expanded", String(isOpen));
-            menuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
+            const open = navLinks.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", String(open));
+            menuToggle.textContent = open ? "✕ Close" : "☰ Menu";
         });
 
-        navLinks.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", function () {
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
                 navLinks.classList.remove("open");
                 menuToggle.setAttribute("aria-expanded", "false");
                 menuToggle.textContent = "☰ Menu";
             });
         });
 
-        // CURRENT YEAR
-        document.getElementById("currentYear").textContent =
-            new Date().getFullYear();
+        // Current year
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-        // PROFILE IMAGE FALLBACK
+        // Profile image fallback
         const profileImage = document.getElementById("profileImage");
         const profileImageWrap = document.getElementById("profileImageWrap");
 
-        profileImage.addEventListener("error", function () {
-            profileImageWrap.classList.add("image-missing");
-        });
+        profileImage.addEventListener("error", () => profileImageWrap.classList.add("image-missing"));
+        profileImage.addEventListener("load", () => profileImageWrap.classList.remove("image-missing"));
 
-        profileImage.addEventListener("load", function () {
-            profileImageWrap.classList.remove("image-missing");
-        });
-
-        // MODAL HELPER
+        // Modal helper
         let previousFocus = null;
 
         function openModal(modal, focusTarget) {
@@ -1706,10 +1781,7 @@
             modal.classList.add("show");
             modal.setAttribute("aria-hidden", "false");
             document.body.classList.add("modal-open");
-
-            if (focusTarget) {
-                focusTarget.focus();
-            }
+            if (focusTarget) focusTarget.focus();
         }
 
         function closeModal(modal) {
@@ -1718,10 +1790,7 @@
             modal.classList.remove("show");
             modal.setAttribute("aria-hidden", "true");
 
-            const anotherModalOpen =
-                document.querySelector(".modal.show") !== null;
-
-            if (!anotherModalOpen) {
+            if (!document.querySelector(".modal.show")) {
                 document.body.classList.remove("modal-open");
             }
 
@@ -1730,18 +1799,17 @@
             }
         }
 
-        // LIVE DEMO MODAL
+        // Live demo
         const demoModal = document.getElementById("demoModal");
         const demoFrame = document.getElementById("demoFrame");
         const demoTitle = document.getElementById("demoModalTitle");
         const demoSubtitle = document.getElementById("demoModalSubtitle");
         const demoAddress = document.getElementById("demoAddress");
-        const demoError = document.getElementById("demoError");
         const openDemoTab = document.getElementById("openDemoTab");
         const closeDemoButton = document.getElementById("closeDemoModal");
 
-        document.querySelectorAll(".live-demo").forEach(function (button) {
-            button.addEventListener("click", function () {
+        document.querySelectorAll(".live-demo").forEach(button => {
+            button.addEventListener("click", () => {
                 const title = button.dataset.title;
                 const src = button.dataset.src;
 
@@ -1749,179 +1817,118 @@
                 demoSubtitle.textContent = "Live preview of " + title;
                 demoAddress.textContent = src;
                 openDemoTab.href = src;
-                demoError.classList.remove("visible");
-                demoFrame.style.display = "block";
                 demoFrame.src = src;
 
                 openModal(demoModal, closeDemoButton);
             });
         });
 
-        // An iframe error event is not reliable for missing HTML files,
-        // so the Open in New Tab link remains available as a fallback.
-        closeDemoButton.addEventListener("click", function () {
+        closeDemoButton.addEventListener("click", () => {
             demoFrame.src = "about:blank";
             closeModal(demoModal);
         });
 
-        // PROJECT DETAILS MODAL
+        // Project details
         const detailsModal = document.getElementById("detailsModal");
-        const detailsTitle = document.getElementById("detailsModalTitle");
-        const detailsHeading = document.getElementById("detailsHeading");
-        const detailsDescription = document.getElementById("detailsDescription");
 
-        document.querySelectorAll(".project-details").forEach(function (button) {
-            button.addEventListener("click", function () {
+        document.querySelectorAll(".project-details").forEach(button => {
+            button.addEventListener("click", () => {
                 const title = button.dataset.title;
-                const description = button.dataset.description;
-
-                detailsTitle.textContent = title;
-                detailsHeading.textContent = title;
-                detailsDescription.textContent = description;
-
-                openModal(
-                    detailsModal,
-                    document.getElementById("closeDetailsModal")
-                );
+                document.getElementById("detailsModalTitle").textContent = title;
+                document.getElementById("detailsHeading").textContent = title;
+                document.getElementById("detailsDescription").textContent = button.dataset.description;
+                openModal(detailsModal, document.getElementById("closeDetailsModal"));
             });
         });
 
-        document.getElementById("closeDetailsModal")
-            .addEventListener("click", function () {
-                closeModal(detailsModal);
-            });
+        document.getElementById("closeDetailsModal").addEventListener("click", () => closeModal(detailsModal));
+        document.getElementById("closeDetailsFooter").addEventListener("click", () => closeModal(detailsModal));
 
-        document.getElementById("closeDetailsFooter")
-            .addEventListener("click", function () {
-                closeModal(detailsModal);
-            });
-
-        // QUICK VIEW RESUME
+        // Resume preview
         const resumeModal = document.getElementById("resumeModal");
-        const quickViewResume = document.getElementById("quickViewResume");
-        const closeResumeModal = document.getElementById("closeResumeModal");
         const resumePreview = document.getElementById("resumePreview");
         const resumeError = document.getElementById("resumeError");
 
-        quickViewResume.addEventListener("click", function () {
+        document.getElementById("quickViewResume").addEventListener("click", () => {
             resumeError.classList.remove("visible");
             resumePreview.style.display = "block";
             resumePreview.src = "assets/images/resume.png";
-
-            openModal(resumeModal, closeResumeModal);
+            openModal(resumeModal, document.getElementById("closeResumeModal"));
         });
 
-        resumePreview.addEventListener("error", function () {
+        resumePreview.addEventListener("error", () => {
             resumePreview.style.display = "none";
             resumeError.classList.add("visible");
         });
 
-        resumePreview.addEventListener("load", function () {
+        resumePreview.addEventListener("load", () => {
             resumePreview.style.display = "block";
             resumeError.classList.remove("visible");
         });
 
-        closeResumeModal.addEventListener("click", function () {
-            closeModal(resumeModal);
-        });
+        document.getElementById("closeResumeModal").addEventListener("click", () => closeModal(resumeModal));
 
-        // CLOSE MODALS BY CLICKING THE BACKGROUND
-        [demoModal, detailsModal, resumeModal].forEach(function (modal) {
-            modal.addEventListener("click", function (event) {
+        // Close modals using backdrop and Escape
+        [demoModal, detailsModal, resumeModal].forEach(modal => {
+            modal.addEventListener("click", event => {
                 if (event.target === modal) {
-                    if (modal === demoModal) {
-                        demoFrame.src = "about:blank";
-                    }
-
+                    if (modal === demoModal) demoFrame.src = "about:blank";
                     closeModal(modal);
                 }
             });
         });
 
-        // ESCAPE KEY CLOSES THE TOPMOST OPEN MODAL
-        document.addEventListener("keydown", function (event) {
+        document.addEventListener("keydown", event => {
             if (event.key !== "Escape") return;
 
-            const openModals = document.querySelectorAll(".modal.show");
-            const lastModal = openModals[openModals.length - 1];
+            const modals = document.querySelectorAll(".modal.show");
+            const lastModal = modals[modals.length - 1];
 
             if (lastModal) {
-                if (lastModal === demoModal) {
-                    demoFrame.src = "about:blank";
-                }
-
+                if (lastModal === demoModal) demoFrame.src = "about:blank";
                 closeModal(lastModal);
             }
         });
 
-        // MOCK INTERVIEW VIDEO STATUS
-        const interviewVideo =
-            document.getElementById("mockInterviewVideo");
-        const interviewStatus =
-            document.getElementById("interviewStatus");
+        // Mock interview video status
+        const interviewVideo = document.getElementById("mockInterviewVideo");
+        const interviewStatus = document.getElementById("interviewStatus");
 
-        interviewVideo.addEventListener("play", function () {
-            interviewStatus.textContent = "Video is playing";
+        interviewVideo.addEventListener("play", () => interviewStatus.textContent = "Video is playing");
+        interviewVideo.addEventListener("pause", () => {
+            if (!interviewVideo.ended) interviewStatus.textContent = "Video paused";
         });
+        interviewVideo.addEventListener("ended", () => interviewStatus.textContent = "Interview video completed");
+        interviewVideo.addEventListener("error", () => interviewStatus.textContent = "Unable to load video. Check assets/videos/andrie.mp4.");
+        interviewVideo.addEventListener("loadedmetadata", () => interviewStatus.textContent = "Video ready to play");
 
-        interviewVideo.addEventListener("pause", function () {
-            if (!interviewVideo.ended) {
-                interviewStatus.textContent = "Video paused";
-            }
-        });
-
-        interviewVideo.addEventListener("ended", function () {
-            interviewStatus.textContent = "Interview video completed";
-        });
-
-        interviewVideo.addEventListener("error", function () {
-            interviewStatus.textContent =
-                "Unable to load video. Check that videos/andrie.mp4 exists.";
-        });
-
-        interviewVideo.addEventListener("loadedmetadata", function () {
-            interviewStatus.textContent = "Video ready to play";
-        });
-
-        // CONTACT FORM
+        // Contact form: opens the visitor's email application.
         // Replace the placeholder with your actual email address.
-        document.getElementById("contactForm")
-            .addEventListener("submit", function (event) {
-                event.preventDefault();
+        document.getElementById("contactForm").addEventListener("submit", event => {
+            event.preventDefault();
 
-                const name =
-                    document.getElementById("contactName").value.trim();
-                const email =
-                    document.getElementById("contactEmail").value.trim();
-                const message =
-                    document.getElementById("contactMessage").value.trim();
+            const name = document.getElementById("contactName").value.trim();
+            const email = document.getElementById("contactEmail").value.trim();
+            const message = document.getElementById("contactMessage").value.trim();
+            const recipient = "your-email@example.com";
 
-                const recipient = "your-email@example.com";
+            if (!name || !email || !message) {
+                alert("Please complete all fields.");
+                return;
+            }
 
-                if (recipient === "your-email@example.com") {
-                    alert(
-                        "Please update the recipient email in the JavaScript " +
-                        "before using the contact form."
-                    );
-                    return;
-                }
+            if (recipient === "your-email@example.com") {
+                alert("Please replace your-email@example.com in the JavaScript with your real email address.");
+                return;
+            }
 
-                const subject = encodeURIComponent(
-                    "Portfolio message from " + name
-                );
+            const subject = encodeURIComponent("Portfolio message from " + name);
+            const body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message);
 
-                const body = encodeURIComponent(
-                    "Name: " + name +
-                    "\nEmail: " + email +
-                    "\n\nMessage:\n" + message
-                );
-
-                window.location.href =
-                    "mailto:" + recipient +
-                    "?subject=" + subject +
-                    "&body=" + body;
-            });
+            window.location.href = "mailto:" + recipient + "?subject=" + subject + "&body=" + body;
+        });
     </script>
+
 </body>
 
 </html>
